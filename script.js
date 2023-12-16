@@ -1,7 +1,7 @@
 const inputval = document.querySelector(".textArea");
 const forcastBtn  = document.querySelector(".btnSubmit");
 const city = document.querySelector(".headingH4");
-const descrip = document.querySelector(".description");
+const description = document.querySelector(".description");
 const temp = document.querySelector(".temp1");
 const wind = document.querySelector(".windSpeed");
 const mainScreen = document.querySelector(".outerSection");
@@ -30,8 +30,8 @@ forcastBtn.addEventListener("click", function() {
             var wndspd = data['wind']['speed']
             city.innerHTML=`Weather of <span>${nameval}<span>`
             temp.innerHTML = `Temperature: <span>${ convertion(tempature)} C</span>`
-            descrip.innerHTML = `Sky Conditions: ${descrip}`
-            // descrip.innerHTML = `Sky Conditions: <span>${descrip}<span>`
+            // descrip.innerHTML = `Sky Conditions: ${descrip}`
+            description.innerHTML = `Sky Conditions: <span>${descrip}<span>`
             wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`
         })
 
