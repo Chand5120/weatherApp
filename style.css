@@ -140,7 +140,7 @@ button {
     
     input {
         border: none;
-        padding: 0rem 6rem 0rem 0rem;
+        padding: 0rem 3rem 0rem 0rem;
     }
     
 
@@ -157,6 +157,16 @@ button {
 @media screen and (max-width: 500px) {
     input {
         border: none;
-        padding: 0rem 12rem 0rem 1rem;
+        padding: 0rem 3rem 0rem 1rem;
+    }
+
+    button {
+        background-color: #fff;
+        border: none;
+        /* padding: 0.5rem 1rem; */
+        /* border-radius: 2rem; */
+        cursor: pointer;
+        font-weight: 1000;
+        color: #000;
     }
 }
