@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <section class="outerSection">
-        <section class="inputArea">
-            <div class="demo">
-                <input type="text" placeholder="Enter any city..." class="textArea">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/cloudy.png" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <title>Weather</title>
+  </head>
+  <body>
+    <section class="container-outer">
+      <form action="" class="search-form">
+        <input
+          type="text"
+          class="input-location"
+          name="search"
+          id="location-input"
+          placeholder="location"
+        />
+        <button type="submit" id="btn">Forcast</button>
+      </form>
+      <div class="weather-moredetails">
+        <div class="weather-img">
+          <img id="image-weather" src="./assets/New folder/Clear.png" alt="weather image" />
+        </div>
+        <article class="weather-details">
+          <h1 class="temperature"><span  class="temperature-value">15</span>&deg;C</h1>
+          <p class="weather-status">Clear</p>
+          <p class="weather-location">
+            Chennai, <span class="country">TN</span>
+          </p>
+          <div class="weather-more">
+            <div class="humidity">
+              <img src="./assets/humidity.png" alt="" />
+              <div class="humidity-details">
+                <p class="humidity-value"><span class="humidity-value1"></span>%</p>
+                <p>Humidity</p>
+              </div>
             </div>
-        </section>
-        <section class="button">
-            <button class="btnSubmit">Show forcast</button>
-        </section>
+            <div class="windspeed">
+              <img src="./assets/windspeed.png" alt="" />
+              <div class="Windspeed-details">
+                <p class="windspeed-value"><span class="windspeed-value1">2</span> KM/hr</p>
+                <p>Windspeed</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
-    <section class="modalWindow hidden">
-        <div class="mainHeading">
-            <h4 class= "headingH4">Weather of</h4>
-            <button class="exitBtn">X</button>
-        </div>
-        <div class="details">
-            <p class="description">Sky conditions</p>
-            <p class="temp1">Temprature</p>
-            <p class="windSpeed">Wind speed</p>
-        </div>
-    </section>
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>

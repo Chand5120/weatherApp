@@ -1,103 +1,162 @@
-* {
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", serif;
+    color: #fff;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(/Stormclouds.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(#80a9db, #3069a7) no-repeat center center fixed;
 }
 
-.demo {
-    display: flex;
-    justify-content: center;
-}
-
-.outerSection {
+.container-outer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
+    gap: 2rem;
+}
 
+.search-form {
     background-color: #fff;
-    width: 500px;
-    height: 200px;
-    border-radius: 25px;
+    padding: 0.6rem;
+    border-radius: 1rem;
 }
 
-.textArea {
-    margin-top: -30px;
-    text-align: center;
+input {
+    border: none;
+    padding: 0rem 15rem 0rem 1rem;
+    color: black;
+    outline: none;
 }
 
-.btnSubmit {
-    margin-top: 30px;
-    padding: 7px 10px;
-    border-width: thin;
-    border-radius: 15px;
+input:active {
+    border: none;
+}
+
+button {
+    background-color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
     cursor: pointer;
+    font-weight: 1000;
+    color: #000;
 }
 
-.btnSubmit:active {
-    background-color: #007FFF;
-    color: white;
-    transform: translateY(4px);
+.weather-moredetails {
+    display: flex;
+    max-width: 55rem;
+    /* background-color: antiquewhite; */
 }
 
-
-.modalWindow {
+.weather-details {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: space-evenly;
     align-items: center;
-    
-    background-color: blanchedalmond;
-    width: 400px;
-    height: 200px;
-    border-radius: 25px;
 }
 
-.mainHeading {
+
+.weather-img {
+    max-width: 50%;
+}
+
+.weather-img>img {
+    max-width: 100%;
+}
+
+.weather-details>h1 {
+    font-size: 7rem;
+    font-weight: 400;
+}
+
+.weather-more {
     display: flex;
-    /* justify-self: flex-start; */
-    justify-content: space-between;
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-    background-color: aquamarine;
-    border-top-right-radius: inherit;
-    border-top-left-radius: inherit;
-    overflow: hidden;
-    margin-bottom: 30px;
-    font-size: 20px;
-}
-.mainHeading> h4 {
-    margin-left: 40px;
+    margin-top: 2rem;
+    gap: 2rem;
 }
 
-.exitBtn {
-    justify-self: flex-end;
-    padding: 2px 7px;
-    border-radius: 10px;
-    margin-right: 17px;
+
+.humidity, .windspeed {
+    display: flex;
+    gap: 1rem;
+}
+.humidity>img, .windspeed>img {
+    max-width: 3rem;
 }
 
-.details {
-    width: 100%;
-    justify-self: flex;
-    margin-left: 100px;
+.humidity-details {
+    display: flex;
+    flex-direction: column;
 }
 
-.details>p {
-    margin-bottom: 10px;
+.humidity-value,
+.windspeed-value,
+.country {
+    font-weight: 600;
 }
 
-.hidden {
-    display: none;
+@media screen and (max-width: 700px) {
+    .weather-moredetails {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-form {
+        background-color: #fff;
+        padding: 0.6rem;
+        border-radius: 1rem;
+    }
+    
+    input {
+        border: none;
+        padding: 0rem 15rem 0rem 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .weather-moredetails {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-form {
+        background-color: #fff;
+        padding: 0.2rem;
+        border-radius: 1rem;
+    }
+    
+    input {
+        border: none;
+        padding: 0rem 6rem 0rem 0rem;
+    }
+    
+
+    .weather-details>h1 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    input {
+        border: none;
+        padding: 0rem 12rem 0rem 1rem;
+    }
 }
